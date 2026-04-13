@@ -10,12 +10,12 @@ export const dictionaries = {
     keyMetrics: {
       title: "Asosiy ko'rsatkichlar",
       metrics: [
-        { label: 'tibbiyot muassasalari' },
-        { label: 'kunlik tashriflar' },
-        { label: 'elektron tibbiy kartalar' },
-        { label: 'tibbiyot xodimlari' },
-        { label: 'dorixonalar' },
-        { label: 'oylik elektron retseptlar' },
+        { value: '> 4 000', label: 'tibbiyot muassasalari', dataPointForAI: 'Over 4,000 medical institutions' },
+        { value: '~ 1 mln', label: 'kunlik tashriflar', dataPointForAI: 'About 1 million daily visits' },
+        { value: '38 mln', label: 'elektron tibbiy kartalar', dataPointForAI: '38 million electronic medical records' },
+        { value: '> 260 000', label: 'tibbiyot xodimlari', dataPointForAI: 'Over 260,000 medical professionals' },
+        { value: '> 18 000', label: 'dorixonalar', dataPointForAI: 'Over 18,000 pharmacies' },
+        { value: '~ 500 000', label: 'oylik elektron retseptlar', dataPointForAI: 'About 500,000 electronic prescriptions monthly' },
       ],
     },
     patientBenefits: {
@@ -44,9 +44,9 @@ export const dictionaries = {
     aiOverview: {
         title: "SUN'IY INTELLEKT",
         stats: [
-            { label: 'AI-yechimlar joriy etilgan'},
-            { label: 'patologiyalar qamrab olingan'},
-            { label: 'diagnostika holatlari'},
+            { value: '> 7', label: 'AI-yechimlar joriy etilgan', dataPointForAI: 'Over 7 AI solutions implemented' },
+            { value: '14', label: 'patologiyalar qamrab olingan', dataPointForAI: '14 pathologies covered' },
+            { value: '> 20 000', label: 'diagnostika holatlari', dataPointForAI: 'Over 20,000 diagnostic cases processed' },
         ]
     },
     aiSolutions: {
@@ -60,9 +60,9 @@ export const dictionaries = {
                 "Tahlillar va tekshiruvlar bo'yicha tavsiyalar"
             ],
             results: [
-                "tor mutaxassislarga o'z vaqtida yo'naltirish",
-                "davolash rejasini shakllantirish vaqtini qisqartirish",
-                "etalon tashxis bilan mos kelish"
+                { value: '+20%', text: "tor mutaxassislarga o'z vaqtida yo'naltirish" },
+                { value: '10 dan 3 minutgacha', text: "davolash rejasini shakllantirish vaqtini qisqartirish" },
+                { value: '>85%', text: "etalon tashxis bilan mos kelish" }
             ]
         },
         stroke: {
@@ -74,9 +74,9 @@ export const dictionaries = {
                 "Tashxis uchun kamroq vaqt, qarorlar aniqligi yuqori"
             ],
             results: [
-                "bitta tadqiqotni qayta ishlash va tahlil qilish",
-                "sezgirlikni aniqlashda aniqlik",
-                "davolanish boshlangunicha bo'lgan vaqtni qisqartirish"
+                { value: '< 2 min', text: "bitta tadqiqotni qayta ishlash va tahlil qilish" },
+                { value: '95-97%', text: "sezgirlikni aniqlashda aniqlik" },
+                { value: '15-25 min', text: "davolanish boshlangunicha bo'lgan vaqtni qisqartirish" }
             ]
         }
     },
@@ -171,12 +171,12 @@ export const dictionaries = {
     keyMetrics: {
       title: "Key Metrics",
       metrics: [
-        { label: 'medical institutions' },
-        { label: 'daily visits' },
-        { label: 'electronic medical records' },
-        { label: 'medical professionals' },
-        { label: 'pharmacies' },
-        { label: 'monthly electronic prescriptions' },
+        { value: '> 4,000', label: 'medical institutions', dataPointForAI: 'Over 4,000 medical institutions' },
+        { value: '~ 1 million', label: 'daily visits', dataPointForAI: 'About 1 million daily visits' },
+        { value: '38 million', label: 'electronic medical records', dataPointForAI: '38 million electronic medical records' },
+        { value: '> 260,000', label: 'medical professionals', dataPointForAI: 'Over 260,000 medical professionals' },
+        { value: '> 18,000', label: 'pharmacies', dataPointForAI: 'Over 18,000 pharmacies' },
+        { value: '~ 500,000', label: 'monthly electronic prescriptions', dataPointForAI: 'About 500,000 electronic prescriptions monthly' },
       ],
     },
     patientBenefits: {
@@ -205,9 +205,9 @@ export const dictionaries = {
     aiOverview: {
         title: "ARTIFICIAL INTELLIGENCE",
         stats: [
-            { label: 'AI solutions implemented'},
-            { label: 'pathologies covered'},
-            { label: 'diagnostic cases'},
+            { value: '> 7', label: 'AI solutions implemented', dataPointForAI: 'Over 7 AI solutions implemented' },
+            { value: '14', label: 'pathologies covered', dataPointForAI: '14 pathologies covered' },
+            { value: '> 20,000', label: 'diagnostic cases', dataPointForAI: 'Over 20,000 diagnostic cases processed' },
         ]
     },
     aiSolutions: {
@@ -221,9 +221,9 @@ export const dictionaries = {
                 "Recommendations for analyses and examinations"
             ],
             results: [
-                "timely referral to specialists",
-                "reduction in time to form a treatment plan",
-                "agreement with the reference diagnosis"
+                { value: '+20%', text: "timely referral to specialists" },
+                { value: 'from 10 to 3 min', text: "reduction in time to form a treatment plan" },
+                { value: '>85%', text: "agreement with the reference diagnosis" }
             ]
         },
         stroke: {
@@ -235,9 +235,9 @@ export const dictionaries = {
                 "Less time for diagnosis, higher decision accuracy"
             ],
             results: [
-                "processing and analysis of one study",
-                "accuracy in sensitivity detection",
-                "reduction in time to start treatment"
+                { value: '< 2 min', text: "processing and analysis of one study" },
+                { value: '95-97%', text: "accuracy in sensitivity detection" },
+                { value: '15-25 min', text: "reduction in time to start treatment" }
             ]
         }
     },
@@ -332,12 +332,12 @@ export const dictionaries = {
     keyMetrics: {
       title: "Ключевые показатели",
       metrics: [
-        { label: 'медицинских учреждений' },
-        { label: 'ежедневных посещений' },
-        { label: 'электронных медицинских карт' },
-        { label: 'медицинских работников' },
-        { label: 'аптек' },
-        { label: 'ежемесячных электронных рецептов' },
+        { value: '> 4 000', label: 'медицинских учреждений', dataPointForAI: 'Over 4,000 medical institutions' },
+        { value: '~ 1 млн', label: 'ежедневных посещений', dataPointForAI: 'About 1 million daily visits' },
+        { value: '38 млн', label: 'электронных медицинских карт', dataPointForAI: '38 million electronic medical records' },
+        { value: '> 260 000', label: 'медицинских работников', dataPointForAI: 'Over 260,000 medical professionals' },
+        { value: '> 18 000', label: 'аптек', dataPointForAI: 'Over 18,000 pharmacies' },
+        { value: '~ 500 000', label: 'ежемесячных электронных рецептов', dataPointForAI: 'About 500,000 electronic prescriptions monthly' },
       ],
     },
     patientBenefits: {
@@ -366,9 +366,9 @@ export const dictionaries = {
     aiOverview: {
         title: "ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ",
         stats: [
-            { label: 'внедрено AI-решений'},
-            { label: 'охвачено патологий'},
-            { label: 'диагностических случаев'},
+            { value: '> 7', label: 'внедрено AI-решений', dataPointForAI: 'Over 7 AI solutions implemented' },
+            { value: '14', label: 'охвачено патологий', dataPointForAI: '14 pathologies covered' },
+            { value: '> 20 000', label: 'диагностических случаев', dataPointForAI: 'Over 20,000 diagnostic cases processed' },
         ]
     },
     aiSolutions: {
@@ -382,9 +382,9 @@ export const dictionaries = {
                 "Рекомендации по анализам и обследованиям"
             ],
             results: [
-                "своевременное направление к узким специалистам",
-                "сокращение времени на формирование плана лечения",
-                "совпадение с эталонным диагнозом"
+                { value: '+20%', text: "своевременное направление к узким специалистам" },
+                { value: 'с 10 до 3 мин', text: "сокращение времени на формирование плана лечения" },
+                { value: '>85%', text: "совпадение с эталонным диагнозом" }
             ]
         },
         stroke: {
@@ -396,9 +396,9 @@ export const dictionaries = {
                 "Меньше времени на диагноз, выше точность решений"
             ],
             results: [
-                "обработка и анализ одного исследования",
-                "точность в определении чувствительности",
-                "сокращение времени до начала лечения"
+                { value: '< 2 мин', text: "обработка и анализ одного исследования" },
+                { value: '95-97%', text: "точность в определении чувствительности" },
+                { value: '15-25 мин', text: "сокращение времени до начала лечения" }
             ]
         }
     },
@@ -485,3 +485,5 @@ export const dictionaries = {
 };
 
 export type Dictionary = typeof dictionaries.uz;
+
+    

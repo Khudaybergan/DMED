@@ -1,11 +1,14 @@
 'use client';
 
 import { GlowCard } from './glow-card';
-import { ListChecks, FlaskConical, BrainCircuit, ScanLine, Clock, Target, CheckCircle, Percent, ArrowDown, Timer } from 'lucide-react';
+import { ListChecks, FlaskConical, BrainCircuit, ScanLine, Target, CheckCircle, Percent, ArrowDown, Timer } from 'lucide-react';
 import { AiExplainerButton } from './ai-explainer-dialog';
 import { useLanguage } from '@/context/language-context';
 
-const AiSolutionCard = ({ solution }: { solution: any }) => (
+const top3dssResultIcons = [Percent, ArrowDown, CheckCircle];
+const strokeResultIcons = [Timer, Percent, ArrowDown];
+
+const AiSolutionCard = ({ solution, resultIcons }: { solution: any, resultIcons: any[] }) => (
   <GlowCard className="p-6 relative">
     <AiExplainerButton dataPoint={solution.dataPointForAI} />
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -26,7 +29,7 @@ const AiSolutionCard = ({ solution }: { solution: any }) => (
       </div>
       <div className="flex flex-col justify-between space-y-3">
         {solution.results.map((result: any, i: number) => {
-           const Icon = result.icon;
+           const Icon = resultIcons[i];
            return (
             <div key={i} className="flex items-center gap-4 p-3 bg-card/90 rounded-lg border border-primary/20">
                <div className="p-2 bg-primary/10 rounded-lg border border-primary/20">
@@ -55,12 +58,7 @@ export function AiSolutionsSection() {
       { icon: BrainCircuit, text: top3dss.features[0] },
       { icon: ListChecks, text: top3dss.features[1] },
       { icon: FlaskConical, text: top3dss.features[2] },
-    ],
-    results: [
-      { icon: Percent, value: '+20%', text: top3dss.results[0] },
-      { icon: ArrowDown, value: '10 dan 3 minutgacha', text: top3dss.results[1] },
-      { icon: CheckCircle, value: '>85%', text: top3dss.results[2] },
-    ],
+    ]
   };
 
   const strokeData = {
@@ -70,12 +68,7 @@ export function AiSolutionsSection() {
       { icon: ScanLine, text: stroke.features[0] },
       { icon: BrainCircuit, text: stroke.features[1] },
       { icon: Target, text: stroke.features[2] },
-    ],
-    results: [
-      { icon: Timer, value: '< 2 min', text: stroke.results[0] },
-      { icon: Percent, value: '95-97%', text: stroke.results[1] },
-      { icon: ArrowDown, value: '15-25 min', text: stroke.results[2] },
-    ],
+    ]
   };
 
 
@@ -83,9 +76,11 @@ export function AiSolutionsSection() {
     <div className="space-y-8">
       <h2 className="text-2xl font-bold text-center">{title}</h2>
       <div className="space-y-6">
-        <AiSolutionCard solution={top3dssData} />
-        <AiSolutionCard solution={strokeData} />
+        <AiSolutionCard solution={top3dssData} resultIcons={top3dssResultIcons} />
+        <AiSolutionCard solution={strokeData} resultIcons={strokeResultIcons} />
       </div>
     </div>
   );
 }
+
+    

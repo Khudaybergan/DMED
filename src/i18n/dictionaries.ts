@@ -161,8 +161,8 @@ export const dictionaries = {
   en: {
     header: {
       title: "DMED IN DIGITAL INDICATORS",
-      republic: "Republic of Uzbekistan",
-      ministry: "Ministry of Health",
+      republic: "MINISTRY OF HEALTH",
+      ministry: "OF THE REPUBLIC OF UZBEKISTAN",
     },
     keyMetrics: {
       title: "Key Metrics",
@@ -320,8 +320,8 @@ export const dictionaries = {
   ru: {
     header: {
       title: "DMED В ЦИФРОВЫХ ПОКАЗАТЕЛЯХ",
-      republic: "Республика Узбекистан",
-      ministry: "Министерство здравоохранения",
+      republic: "МИНИСТЕРСТВО ЗДРАВООХРАНЕНИЯ",
+      ministry: "РЕСПУБЛИКИ УЗБЕКИСТАН",
     },
     keyMetrics: {
       title: "Ключевые показатели",

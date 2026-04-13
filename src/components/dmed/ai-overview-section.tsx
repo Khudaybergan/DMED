@@ -36,7 +36,7 @@ export function AiOverviewSection() {
       <h2 className="text-2xl font-bold text-center text-primary mb-6">SUN'IY INTELLEKT</h2>
       <div className="grid grid-rows-3 gap-4 flex-1">
         {aiStats.map((stat, i) => (
-          <GlowCard key={i} className="flex items-center gap-4 p-4">
+          <div key={i} className="relative flex items-center gap-4 p-4 rounded-xl bg-card border border-primary/20">
             <AiExplainerButton dataPoint={stat.dataPointForAI} />
             <div className="p-3 bg-primary/10 rounded-lg border border-primary/20">
               <stat.icon className="h-8 w-8 text-primary" />
@@ -45,7 +45,7 @@ export function AiOverviewSection() {
               <p className="text-3xl font-bold text-primary">{stat.value}</p>
               <p className="text-sm text-muted-foreground">{stat.label}</p>
             </div>
-          </GlowCard>
+          </div>
         ))}
       </div>
     </GlowCard>

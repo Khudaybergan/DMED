@@ -26,7 +26,7 @@ const AiSolutionCard = ({ title, subtitle, features, results, dataPointForAI }: 
       </div>
       <div className="flex flex-col justify-between space-y-3">
         {results.map((result, i) => (
-          <GlowCard key={i} className="flex items-center gap-4 p-3 bg-card/90">
+          <div key={i} className="flex items-center gap-4 p-3 bg-card/90 rounded-lg border border-primary/20">
              <div className="p-2 bg-primary/10 rounded-lg border border-primary/20">
               <result.icon className="h-6 w-6 text-primary" />
             </div>
@@ -34,7 +34,7 @@ const AiSolutionCard = ({ title, subtitle, features, results, dataPointForAI }: 
               <p className="text-xl font-bold text-primary">{result.value}</p>
               <p className="text-sm text-muted-foreground">{result.text}</p>
             </div>
-          </GlowCard>
+          </div>
         ))}
       </div>
     </div>

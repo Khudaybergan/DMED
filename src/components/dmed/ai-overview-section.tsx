@@ -32,22 +32,22 @@ const aiStats: AiStat[] = [
 
 export function AiOverviewSection() {
   return (
-    <GlowCard className="p-6 h-full flex flex-col">
-      <h2 className="text-2xl font-bold text-center text-primary mb-6">SUN'IY INTELLEKT</h2>
-      <div className="grid grid-rows-3 gap-4 flex-1">
+    <div className="w-full max-w-7xl">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">SUN'IY INTELLEKT</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {aiStats.map((stat, i) => (
-          <div key={i} className="relative flex items-center gap-4 p-4 rounded-xl bg-card border border-primary/20">
+          <GlowCard key={i} className="relative p-8 text-center">
             <AiExplainerButton dataPoint={stat.dataPointForAI} />
-            <div className="p-3 bg-primary/10 rounded-lg border border-primary/20">
-              <stat.icon className="h-8 w-8 text-primary" />
+             <div className="p-4 bg-primary/10 rounded-xl border border-primary/20 mb-6 inline-block">
+              <stat.icon className="h-12 w-12 text-primary" />
             </div>
             <div>
-              <p className="text-3xl font-bold text-primary">{stat.value}</p>
-              <p className="text-sm text-muted-foreground">{stat.label}</p>
+              <p className="text-5xl font-bold text-primary">{stat.value}</p>
+              <p className="text-lg text-muted-foreground mt-2">{stat.label}</p>
             </div>
-          </div>
+          </GlowCard>
         ))}
       </div>
-    </GlowCard>
+    </div>
   );
 }

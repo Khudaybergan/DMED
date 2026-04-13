@@ -1,9 +1,11 @@
 import { DashboardHeader } from '@/components/dmed/dashboard-header';
 import { KeyMetrics } from '@/components/dmed/key-metrics';
 import { BenefitsSection } from '@/components/dmed/benefits-section';
+import { DoctorBenefitsSection } from '@/components/dmed/doctor-benefits-section';
 import { AiOverviewSection } from '@/components/dmed/ai-overview-section';
 import { AiSolutionsSection } from '@/components/dmed/ai-solutions-section';
 import { ModulesSection } from '@/components/dmed/modules-section';
+import { KeyResultsSection } from '@/components/dmed/key-results-section';
 
 export default function Home() {
   return (
@@ -16,22 +18,33 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="benefits-and-ai-overview" className="min-h-full h-auto w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 bg-card/30 snap-start">
-          <div className="w-full max-w-[1920px]">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-              <div className="lg:col-span-7 h-full">
-                <BenefitsSection />
-              </div>
-              <div className="lg:col-span-5 h-full">
-                <AiOverviewSection />
-              </div>
-            </div>
+        <section id="patient-benefits" className="min-h-full h-auto w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 bg-card/30 snap-start">
+           <div className="w-full max-w-[1920px] py-16">
+            <BenefitsSection />
+          </div>
+        </section>
+
+        <section id="doctor-benefits" className="min-h-full h-auto w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 snap-start">
+           <div className="w-full max-w-[1920px] py-16">
+            <DoctorBenefitsSection />
+          </div>
+        </section>
+
+        <section id="ai-overview" className="min-h-full h-auto w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 bg-card/30 snap-start">
+          <div className="w-full max-w-[1920px] py-16">
+            <AiOverviewSection />
           </div>
         </section>
 
         <section id="ai-solutions" className="min-h-full h-auto w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 snap-start">
           <div className="w-full max-w-[1920px] py-16">
             <AiSolutionsSection />
+          </div>
+        </section>
+        
+        <section id="key-results" className="min-h-full h-auto w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 bg-card/30 snap-start">
+          <div className="w-full max-w-[1920px] py-16">
+            <KeyResultsSection />
           </div>
         </section>
 

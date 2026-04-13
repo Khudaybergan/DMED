@@ -10,8 +10,12 @@ export function DashboardHeader() {
         </h1>
       </div>
       <div className="flex items-center gap-4 md:gap-6">
-        <FullscreenButton />
+        <div className="text-right">
+          <p className="text-sm font-semibold uppercase text-foreground/90 tracking-wider">O'zbekiston Respublikasi</p>
+          <p className="text-xs font-medium uppercase text-muted-foreground tracking-wider">Sog'liqni saqlash vazirligi</p>
+        </div>
         <DmedLogo />
+        <FullscreenButton />
       </div>
     </header>
   );

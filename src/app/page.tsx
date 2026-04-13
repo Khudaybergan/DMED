@@ -3,6 +3,7 @@ import { KeyMetrics } from '@/components/dmed/key-metrics';
 import { BenefitsSection } from '@/components/dmed/benefits-section';
 import { AiOverviewSection } from '@/components/dmed/ai-overview-section';
 import { AiSolutionsSection } from '@/components/dmed/ai-solutions-section';
+import { ModulesSection } from '@/components/dmed/modules-section';
 
 export default function Home() {
   return (
@@ -33,6 +34,13 @@ export default function Home() {
             <AiSolutionsSection />
           </div>
         </section>
+
+        <section id="dmed-modules" className="min-h-full h-auto w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 snap-start">
+          <div className="w-full max-w-[1920px] h-full flex flex-col justify-center">
+             <ModulesSection />
+          </div>
+        </section>
+
       </main>
     </div>
   );

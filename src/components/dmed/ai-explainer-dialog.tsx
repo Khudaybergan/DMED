@@ -22,8 +22,12 @@ import { getAIExplanation } from '@/app/actions';
 import { Loader2, Sparkles, Wand2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { useLanguage } from '@/context/language-context';
 
 export function AiExplainerDialog({ dataPoint, children }: { dataPoint: string; children: React.ReactNode }) {
+  const { dictionary } = useLanguage();
+  const { dialog, buttonTooltip } = dictionary.aiExplainer;
+  
   const [open, setOpen] = useState(false);
   const [audience, setAudience] = useState('medical professional');
   const [explanation, setExplanation] = useState('');
@@ -43,17 +47,17 @@ export function AiExplainerDialog({ dataPoint, children }: { dataPoint: string; 
     } else {
       toast({
         variant: "destructive",
-        title: "Xatolik",
+        title: dialog.errorTitle,
         description: result.error,
       });
     }
   };
-
-  const audienceMap: { [key: string]: string } = {
-    'medical professional': 'Tibbiyot xodimi',
-    'government official': 'Davlat xizmatchisi',
-    'general public': 'Keng jamoatchilik',
-  };
+  
+  const audienceOptions = [
+    { value: 'medical professional', label: dialog.audiences.medical },
+    { value: 'government official', label: dialog.audiences.government },
+    { value: 'general public', label: dialog.audiences.public },
+  ];
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -62,23 +66,23 @@ export function AiExplainerDialog({ dataPoint, children }: { dataPoint: string; 
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <Wand2 className="text-primary" />
-            <span>Kontekstli tushuntirish</span>
+            <span>{dialog.title}</span>
           </DialogTitle>
           <DialogDescription>
-            "{dataPoint}" uchun sun'iy intellekt yordamida tushuntirish olish uchun auditoriyani tanlang.
+             {dialog.description.replace('{dataPoint}', dataPoint)}
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <label htmlFor="audience" className="text-right">
-              Auditoriya
+              {dialog.audienceLabel}
             </label>
             <Select value={audience} onValueChange={setAudience}>
               <SelectTrigger id="audience" className="col-span-3">
-                <SelectValue placeholder="Auditoriyani tanlang" />
+                <SelectValue placeholder={dialog.audiencePlaceholder} />
               </SelectTrigger>
               <SelectContent>
-                {Object.entries(audienceMap).map(([value, label]) => (
+                {audienceOptions.map(({ value, label }) => (
                   <SelectItem key={value} value={value}>
                     {label}
                   </SelectItem>
@@ -100,7 +104,7 @@ export function AiExplainerDialog({ dataPoint, children }: { dataPoint: string; 
         <DialogFooter>
           <Button onClick={handleExplain} disabled={loading} className="w-full sm:w-auto">
             {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4" />}
-            Yaratish
+            {dialog.buttonText}
           </Button>
         </DialogFooter>
       </DialogContent>
@@ -109,6 +113,7 @@ export function AiExplainerDialog({ dataPoint, children }: { dataPoint: string; 
 }
 
 export function AiExplainerButton({ dataPoint }: { dataPoint: string }) {
+  const { dictionary } = useLanguage();
   return (
     <AiExplainerDialog dataPoint={dataPoint}>
       <TooltipProvider>
@@ -124,7 +129,7 @@ export function AiExplainerButton({ dataPoint }: { dataPoint: string }) {
             </Button>
           </TooltipTrigger>
           <TooltipContent>
-            <p>AI yordamida tushuntirish</p>
+            <p>{dictionary.aiExplainer.buttonTooltip}</p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>

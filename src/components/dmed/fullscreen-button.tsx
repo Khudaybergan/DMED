@@ -9,8 +9,12 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useLanguage } from '@/context/language-context';
+
 
 export function FullscreenButton() {
+  const { dictionary } = useLanguage();
+  const { exit, enter } = dictionary.fullscreen;
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handleFullscreenChange = useCallback(() => {
@@ -34,6 +38,8 @@ export function FullscreenButton() {
     }
   };
 
+  const tooltipText = isFullscreen ? exit : enter;
+
   return (
     <TooltipProvider>
       <Tooltip>
@@ -41,12 +47,12 @@ export function FullscreenButton() {
           <Button variant="ghost" size="icon" onClick={toggleFullscreen} className="text-foreground/80 hover:text-primary">
             {isFullscreen ? <Minimize className="h-5 w-5" /> : <Maximize className="h-5 w-5" />}
             <span className="sr-only">
-              {isFullscreen ? 'Toʻliq ekrandan chiqish' : 'Toʻliq ekran rejimi'}
+              {tooltipText}
             </span>
           </Button>
         </TooltipTrigger>
         <TooltipContent>
-          <p>{isFullscreen ? 'Toʻliq ekrandan chiqish' : 'Toʻliq ekran rejimi'}</p>
+          <p>{tooltipText}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

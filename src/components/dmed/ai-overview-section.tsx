@@ -32,9 +32,9 @@ const aiStats: AiStat[] = [
 
 export function AiOverviewSection() {
   return (
-    <GlowCard className="p-6 h-full">
+    <GlowCard className="p-6 h-full flex flex-col">
       <h2 className="text-2xl font-bold text-center text-brand-orange mb-6">SUN'IY INTELLEKT</h2>
-      <div className="space-y-4">
+      <div className="grid grid-rows-3 gap-4 flex-1">
         {aiStats.map((stat, i) => (
           <GlowCard key={i} className="flex items-center gap-4 p-4">
             <AiExplainerButton dataPoint={stat.dataPointForAI} />

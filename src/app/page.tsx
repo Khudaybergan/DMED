@@ -8,28 +8,28 @@ export default function Home() {
   return (
     <div className="bg-background font-headline text-foreground h-full flex flex-col">
       <DashboardHeader />
-      <main className="flex-1 overflow-y-scroll snap-y snap-mandatory">
-        <section id="key-metrics" className="h-full w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 snap-start">
-          <div className="w-full max-w-[1920px]">
+      <main className="flex-1 overflow-y-auto snap-y snap-mandatory">
+        <section id="key-metrics" className="min-h-full h-auto w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 snap-start">
+          <div className="w-full max-w-[1920px] py-16">
             <KeyMetrics />
           </div>
         </section>
 
-        <section id="benefits-and-ai-overview" className="h-full w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 bg-card/30 snap-start">
+        <section id="benefits-and-ai-overview" className="min-h-full h-auto w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 bg-card/30 snap-start">
           <div className="w-full max-w-[1920px]">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-              <div className="lg:col-span-7">
+              <div className="lg:col-span-7 h-full">
                 <BenefitsSection />
               </div>
-              <div className="lg:col-span-5">
+              <div className="lg:col-span-5 h-full">
                 <AiOverviewSection />
               </div>
             </div>
           </div>
         </section>
 
-        <section id="ai-solutions" className="h-full w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 snap-start">
-          <div className="w-full max-w-[1920px]">
+        <section id="ai-solutions" className="min-h-full h-auto w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 snap-start">
+          <div className="w-full max-w-[1920px] py-16">
             <AiSolutionsSection />
           </div>
         </section>

@@ -1,13 +1,16 @@
 import { GlowCard } from './glow-card';
 import { ListChecks, FlaskConical, BrainCircuit, ScanLine, Clock, Target, CheckCircle, Percent, ArrowDown, Timer } from 'lucide-react';
+import { AiExplainerButton } from './ai-explainer-dialog';
 
-const AiSolutionCard = ({ title, subtitle, features, results }: {
+const AiSolutionCard = ({ title, subtitle, features, results, dataPointForAI }: {
   title: string,
   subtitle: string,
   features: { icon: any, text: string }[],
-  results: { icon: any, text: string, value: string }[]
+  results: { icon: any, text: string, value: string }[],
+  dataPointForAI: string
 }) => (
-  <GlowCard className="p-6">
+  <GlowCard className="p-6 relative">
+    <AiExplainerButton dataPoint={dataPointForAI} />
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
         <h3 className="text-xl font-bold text-primary">{title}</h3>
@@ -21,7 +24,7 @@ const AiSolutionCard = ({ title, subtitle, features, results }: {
           ))}
         </ul>
       </div>
-      <div className="space-y-3">
+      <div className="flex flex-col justify-between space-y-3">
         {results.map((result, i) => (
           <GlowCard key={i} className="flex items-center gap-4 p-3 bg-card/90">
              <div className="p-2 bg-primary/10 rounded-lg border border-primary/20">
@@ -42,6 +45,7 @@ export function AiSolutionsSection() {
   const top3dss = {
     title: 'AI TOP3-DSS',
     subtitle: 'Tezroq tashxis qo\'yish uchun klinik qarorlarni intellektual qo\'llab-quvvatlash',
+    dataPointForAI: 'AI TOP3-DSS: Intelligent clinical decision support for faster diagnosis',
     features: [
       { icon: BrainCircuit, text: 'Ishonch darajalari bilan ehtimoliy tashxisning TOP3 variantini tanlash' },
       { icon: ListChecks, text: 'Klinik protokollar bo\'yicha tayinlovlar' },
@@ -57,6 +61,7 @@ export function AiSolutionsSection() {
   const stroke = {
     title: 'AI STROKE',
     subtitle: 'Insult patologiyasini aniqlash, tasniflash va baholash uchun KT va MRT tahlili uchun sun\'iy intellekt',
+    dataPointForAI: 'AI STROKE: AI analysis of CT and MRI for detection, classification, and assessment of stroke pathology',
     features: [
       { icon: ScanLine, text: 'KT orqali tez aniqlash va tasniflash' },
       { icon: BrainCircuit, text: 'ASPECTS shkalasi va gematoma hajmini avtomatik baholash' },

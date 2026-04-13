@@ -13,6 +13,7 @@ import {
   PieChart,
   type LucideIcon,
 } from 'lucide-react';
+import { AiExplainerButton } from './ai-explainer-dialog';
 
 type Benefit = {
   icon: LucideIcon;
@@ -47,7 +48,8 @@ const BenefitItem = ({ benefit }: { benefit: Benefit }) => (
 
 export function BenefitsSection() {
   return (
-    <GlowCard className="p-6 h-full">
+    <GlowCard className="p-6 h-full relative">
+      <AiExplainerButton dataPoint="Conveniences for the public and doctors in the DMED system" />
       <h2 className="text-2xl font-bold text-center mb-6">Aholi va shifokorlar uchun qulayliklar</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
         <div>

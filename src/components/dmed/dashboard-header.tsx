@@ -1,4 +1,5 @@
 import { MinistryOfHealthLogo, UzinfocomLogo } from './logos';
+import { FullscreenButton } from './fullscreen-button';
 
 export function DashboardHeader() {
   return (
@@ -15,6 +16,7 @@ export function DashboardHeader() {
       <div className="flex items-center gap-4 md:gap-6 text-xs md:text-sm">
         <MinistryOfHealthLogo className="h-10" />
         <UzinfocomLogo className="h-6" />
+        <FullscreenButton />
       </div>
     </header>
   );

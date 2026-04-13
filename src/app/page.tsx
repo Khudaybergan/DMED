@@ -6,21 +6,33 @@ import { AiSolutionsSection } from '@/components/dmed/ai-solutions-section';
 
 export default function Home() {
   return (
-    <div className="flex justify-center min-h-screen bg-background font-headline">
-      <main className="w-full max-w-[1920px] p-4 sm:p-6 md:p-8 space-y-8">
-        <DashboardHeader />
-        <div className="grid grid-cols-1 gap-8">
-          <KeyMetrics />
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <div className="lg:col-span-7">
-              <BenefitsSection />
-            </div>
-            <div className="lg:col-span-5">
-              <AiOverviewSection />
+    <div className="bg-background font-headline text-foreground">
+      <DashboardHeader />
+      <main>
+        <section id="key-metrics" className="min-h-screen w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8">
+          <div className="w-full max-w-[1920px]">
+            <KeyMetrics />
+          </div>
+        </section>
+
+        <section id="benefits-and-ai-overview" className="min-h-screen w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 bg-card/30">
+          <div className="w-full max-w-[1920px]">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+              <div className="lg:col-span-7">
+                <BenefitsSection />
+              </div>
+              <div className="lg:col-span-5">
+                <AiOverviewSection />
+              </div>
             </div>
           </div>
-          <AiSolutionsSection />
-        </div>
+        </section>
+
+        <section id="ai-solutions" className="min-h-screen w-full flex flex-col justify-center items-center p-4 sm:p-6 md:p-8">
+          <div className="w-full max-w-[1920px]">
+            <AiSolutionsSection />
+          </div>
+        </section>
       </main>
     </div>
   );

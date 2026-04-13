@@ -1,5 +1,4 @@
 import { GlowCard } from './glow-card';
-import { DmedLogo } from './logos';
 import {
   Hospital,
   Users,
@@ -68,28 +67,12 @@ const MetricCard = ({ metric }: { metric: Metric }) => (
 
 export function KeyMetrics() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-8 gap-6 items-center">
-      <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {metrics.slice(0, 3).map((metric, i) => (
+    <div className="space-y-8 w-full">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Asosiy ko'rsatkichlar</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {metrics.map((metric, i) => (
           <MetricCard key={i} metric={metric} />
         ))}
-        <div className="sm:col-span-2">
-            <MetricCard metric={metrics[3]} />
-        </div>
-      </div>
-
-      <div className="md:col-span-2 flex justify-center items-center p-8">
-        <div className="relative">
-          <div className="absolute -inset-4 bg-primary/10 rounded-full animate-pulse blur-2xl"></div>
-          <div className="relative bg-card/50 p-6 rounded-full border-2 border-primary/30">
-            <DmedLogo className="h-24 w-24" />
-          </div>
-        </div>
-      </div>
-
-      <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <MetricCard metric={metrics[4]} />
-        <MetricCard metric={metrics[5]} />
       </div>
     </div>
   );

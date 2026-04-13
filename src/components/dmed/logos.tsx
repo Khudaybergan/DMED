@@ -1,23 +1,5 @@
 import { cn } from "@/lib/utils";
 
-export function DmedLogo({ className }: { className?: string }) {
-  return (
-    <svg
-      className={cn("text-primary", className)}
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 36C19.58 36 16 32.42 16 28C16 23.58 19.58 20 24 20C28.42 20 32 23.58 32 28C32 32.42 28.42 36 24 36ZM26 18H22V12H26V18Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
-
 export function UzinfocomLogo({ className }: { className?: string }) {
   return (
     <div className={cn("flex items-center gap-2 text-foreground/80", className)}>

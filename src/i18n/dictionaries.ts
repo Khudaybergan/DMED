@@ -2,8 +2,7 @@ export const dictionaries = {
   uz: {
     header: {
       title: "DMED RAQAMLI KO'RSATKICHLARDA",
-      republic: "O'zbekiston Respublikasi",
-      ministry: "Sog'liqni saqlash vazirligi",
+      ministry: "O'ZBEKISTON RESPUBLIKASI SOG'LIQNI SAQLASH VAZIRLIGI",
     },
     keyMetrics: {
       title: "Asosiy ko'rsatkichlar",
@@ -161,8 +160,7 @@ export const dictionaries = {
   en: {
     header: {
       title: "DMED IN DIGITAL INDICATORS",
-      republic: "MINISTRY OF HEALTH",
-      ministry: "OF THE REPUBLIC OF UZBEKISTAN",
+      ministry: "MINISTRY OF HEALTH OF THE REPUBLIC OF UZBEKISTAN",
     },
     keyMetrics: {
       title: "Key Metrics",
@@ -320,8 +318,7 @@ export const dictionaries = {
   ru: {
     header: {
       title: "DMED В ЦИФРОВЫХ ПОКАЗАТЕЛЯХ",
-      republic: "МИНИСТЕРСТВО ЗДРАВООХРАНЕНИЯ",
-      ministry: "РЕСПУБЛИКИ УЗБЕКИСТАН",
+      ministry: "МИНИСТЕРСТВО ЗДРАВООХРАНЕНИЯ РЕСПУБЛИКИ УЗБЕКИСТАН",
     },
     keyMetrics: {
       title: "Ключевые показатели",

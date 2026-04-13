@@ -57,3 +57,11 @@ export function MinistryOfHealthLogo({ className }: { className?: string }) {
     </div>
   );
 }
+
+export function DmedLogo({ className }: { className?: string }) {
+  return (
+    <div className={cn("h-10 w-10 md:h-12 md:w-12 bg-primary/20 rounded-lg flex items-center justify-center border-2 border-primary/50", className)}>
+      <span className="text-xs text-primary font-bold">LOGO</span>
+    </div>
+  );
+}

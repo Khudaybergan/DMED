@@ -65,9 +65,9 @@ export function DmedLogo({ className }: { className?: string }) {
     <Image
         src={dmedLogo}
         alt="DMED Logo"
-        width={48}
-        height={48}
-        className={cn("h-10 w-10 md:h-12 md:w-12 rounded-lg object-contain border-2 border-primary/50", className)}
+        width={56}
+        height={56}
+        className={cn("h-12 w-12 md:h-14 md:w-14 object-contain", className)}
     />
   );
 }

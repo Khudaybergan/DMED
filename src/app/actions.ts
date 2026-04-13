@@ -17,8 +17,8 @@ export async function getAIExplanation(input: AiContextualExplainerInput) {
   } catch (error) {
     console.error('AI Explanation Error:', error);
     if (error instanceof z.ZodError) {
-      return { success: false, error: 'Invalid input provided.' };
+      return { success: false, error: "Noto'g'ri ma'lumot kiritildi." };
     }
-    return { success: false, error: 'Failed to generate explanation. Please try again later.' };
+    return { success: false, error: "Tushuntirish yaratib bo'lmadi. Iltimos, keyinroq qayta urinib ko'ring." };
   }
 }

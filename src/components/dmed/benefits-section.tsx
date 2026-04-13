@@ -20,20 +20,20 @@ type Benefit = {
 };
 
 const patientBenefits: Benefit[] = [
-  { icon: CalendarCheck, text: 'Онлайн запись к врачу' },
-  { icon: Beaker, text: 'Доступ к результатам анализов' },
-  { icon: FileDigit, text: 'Электронные медицинские документы' },
-  { icon: ShieldCheck, text: 'Контроль лечения и рецептов' },
-  { icon: HeartPulse, text: 'Мониторинг здоровья семьи' },
+  { icon: CalendarCheck, text: 'Shifokor qabuliga onlayn yozilish' },
+  { icon: Beaker, text: 'Tahlil natijalarini ko\'rish' },
+  { icon: FileDigit, text: 'Elektron tibbiy hujjatlar' },
+  { icon: ShieldCheck, text: 'Davolanish va retseptlarni nazorat qilish' },
+  { icon: HeartPulse, text: 'Oila salomatligi monitoringi' },
 ];
 
 const doctorBenefits: Benefit[] = [
-  { icon: Replace, text: 'Оцифровано более 320 форм и журналов' },
-  { icon: Clock, text: 'Сокращение времени ожидания: с 40 до 10 минут' },
-  { icon: Video, text: 'Онлайн-консультации' },
-  { icon: Users, text: 'Единый учет населения' },
-  { icon: History, text: 'Прозрачная история пациента' },
-  { icon: PieChart, text: 'Автоматизированная отчетность' },
+  { icon: Replace, text: '320 dan ortiq shakl va jurnallar raqamlashtirildi' },
+  { icon: Clock, text: 'Kutish vaqtini qisqartirish: 40 daqiqadan 10 daqiqagacha' },
+  { icon: Video, text: 'Onlayn maslahatlar' },
+  { icon: Users, text: 'Aholining yagona hisobi' },
+  { icon: History, text: 'Bemorning shaffof tarixi' },
+  { icon: PieChart, text: 'Avtomatlashtirilgan hisobotlar' },
 ];
 
 const BenefitItem = ({ benefit }: { benefit: Benefit }) => (
@@ -48,10 +48,10 @@ const BenefitItem = ({ benefit }: { benefit: Benefit }) => (
 export function BenefitsSection() {
   return (
     <GlowCard className="p-6 h-full">
-      <h2 className="text-2xl font-bold text-center mb-6">Удобства для населения и врачей</h2>
+      <h2 className="text-2xl font-bold text-center mb-6">Aholi va shifokorlar uchun qulayliklar</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
         <div>
-          <h3 className="text-lg font-semibold text-primary mb-4">Для пациентов</h3>
+          <h3 className="text-lg font-semibold text-primary mb-4">Bemorlar uchun</h3>
           <ul className="space-y-4">
             {patientBenefits.map((benefit, i) => (
               <BenefitItem key={i} benefit={benefit} />
@@ -59,7 +59,7 @@ export function BenefitsSection() {
           </ul>
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-primary mb-4">Для врачей</h3>
+          <h3 className="text-lg font-semibold text-primary mb-4">Shifokorlar uchun</h3>
           <ul className="space-y-4">
             {doctorBenefits.map((benefit, i) => (
               <BenefitItem key={i} benefit={benefit} />

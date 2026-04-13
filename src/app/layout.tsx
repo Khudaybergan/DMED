@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'DMED Insights Board',
-  description: 'DMED Digital Healthcare System in Uzbekistan',
+  title: "DMED Raqamli Ko'rsatkichlar Paneli",
+  description: "O'zbekistondagi DMED raqamli sog'liqni saqlash tizimi",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="uz" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

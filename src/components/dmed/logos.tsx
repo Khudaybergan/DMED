@@ -57,25 +57,21 @@ export function MinistryOfHealthLogo({ className }: { className?: string }) {
           d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
           stroke="currentColor"
           strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         />
-        <path
-          d="M15.5 9.5L12 13L8.5 9.5"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M12 13V18.5"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+        <g transform="scale(0.65) translate(6, 0.5)" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M6 3.5c0 2.5-2 5-2 5s2 2.5 2 5" />
+            <path d="M18 3.5c0 2.5 2 5 2 5s-2 2.5-2 5" />
+            <path d="M4 8.5h16" />
+            <path d="M4 15.5h16" />
+            <path d="M10 3.5c0 2.5 2 5 2 5" />
+            <path d="M14 8.5c-2 0-2 2.5-2 2.5" />
+            <path d="M10 15.5c0 2.5 2 5 2 5" />
+            <path d="M14 3.5c0 2.5-2 5-2 5" />
+            <path d="M10 8.5c2 0 2 2.5 2 2.5" />
+            <path d="M14 15.5c0 2.5-2 5-2 5" />
+        </g>
       </svg>
-      <span className="font-semibold tracking-wider">MINISTRY OF HEALTH</span>
+      <span className="font-semibold tracking-wider">SOG'LIQNI SAQLASH VAZIRLIGI</span>
     </div>
   );
 }

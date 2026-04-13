@@ -41,37 +41,37 @@ const AiSolutionCard = ({ title, subtitle, features, results }: {
 export function AiSolutionsSection() {
   const top3dss = {
     title: 'AI TOP3-DSS',
-    subtitle: 'Интеллектуальная поддержка клинических решений для более быстрой диагностики',
+    subtitle: 'Tezroq tashxis qo\'yish uchun klinik qarorlarni intellektual qo\'llab-quvvatlash',
     features: [
-      { icon: BrainCircuit, text: 'Подбор ТОРЗ вероятного диагноза с уровнями уверенности' },
-      { icon: ListChecks, text: 'Назначения по клиническим протоколам' },
-      { icon: FlaskConical, text: 'Рекомендации по анализам и обследованиям' },
+      { icon: BrainCircuit, text: 'Ishonch darajalari bilan ehtimoliy tashxisning TOP3 variantini tanlash' },
+      { icon: ListChecks, text: 'Klinik protokollar bo\'yicha tayinlovlar' },
+      { icon: FlaskConical, text: 'Tahlillar va tekshiruvlar bo\'yicha tavsiyalar' },
     ],
     results: [
-      { icon: Percent, value: '+20%', text: 'своевременных направлений к узким специалистам' },
-      { icon: ArrowDown, value: 'с 10 до 3 мин', text: 'сокращение времени на формирование плана лечения' },
-      { icon: CheckCircle, value: '>85%', text: 'совпадение с эталонным диагнозом' },
+      { icon: Percent, value: '+20%', text: 'tor mutaxassislarga o\'z vaqtida yo\'naltirish' },
+      { icon: ArrowDown, value: '10 dan 3 minutgacha', text: 'davolash rejasini shakllantirish vaqtini qisqartirish' },
+      { icon: CheckCircle, value: '>85%', text: 'etalon tashxis bilan mos kelish' },
     ],
   };
 
   const stroke = {
     title: 'AI STROKE',
-    subtitle: 'ИИ для анализа КТ и МРТ с целью выявления, классификации и оценки инсультной патологии',
+    subtitle: 'Insult patologiyasini aniqlash, tasniflash va baholash uchun KT va MRT tahlili uchun sun\'iy intellekt',
     features: [
-      { icon: ScanLine, text: 'Быстрое выявление и классификация по КТ' },
-      { icon: BrainCircuit, text: 'Автоматическая оценка ASPECTS и объема гематомы' },
-      { icon: Target, text: 'Меньше времени на диагноз, выше точность решений' },
+      { icon: ScanLine, text: 'KT orqali tez aniqlash va tasniflash' },
+      { icon: BrainCircuit, text: 'ASPECTS shkalasi va gematoma hajmini avtomatik baholash' },
+      { icon: Target, text: 'Tashxis uchun kamroq vaqt, qarorlar aniqligi yuqori' },
     ],
     results: [
-      { icon: Timer, value: '< 2 мин', text: 'обработка и анализ одного исследования' },
-      { icon: Percent, value: '95-97%', text: 'точности при обнаружении чувствительности' },
-      { icon: ArrowDown, value: '15-25 мин', text: 'сокращение времени до начала лечения' },
+      { icon: Timer, value: '< 2 min', text: 'bitta tadqiqotni qayta ishlash va tahlil qilish' },
+      { icon: Percent, value: '95-97%', text: 'sezgirlikni aniqlashda aniqlik' },
+      { icon: ArrowDown, value: '15-25 min', text: 'davolanish boshlangunicha bo\'lgan vaqtni qisqartirish' },
     ],
   };
 
   return (
     <div className="space-y-8">
-      <h2 className="text-2xl font-bold text-center">Примеры AI-решений</h2>
+      <h2 className="text-2xl font-bold text-center">AI-yechimlar namunalari</h2>
       <div className="space-y-6">
         <AiSolutionCard {...top3dss} />
         <AiSolutionCard {...stroke} />

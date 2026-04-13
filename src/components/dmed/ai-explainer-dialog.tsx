@@ -43,16 +43,16 @@ export function AiExplainerDialog({ dataPoint, children }: { dataPoint: string; 
     } else {
       toast({
         variant: "destructive",
-        title: "Ошибка",
+        title: "Xatolik",
         description: result.error,
       });
     }
   };
 
   const audienceMap: { [key: string]: string } = {
-    'medical professional': 'Медицинский работник',
-    'government official': 'Государственный служащий',
-    'general public': 'Общественность',
+    'medical professional': 'Tibbiyot xodimi',
+    'government official': 'Davlat xizmatchisi',
+    'general public': 'Keng jamoatchilik',
   };
 
   return (
@@ -62,20 +62,20 @@ export function AiExplainerDialog({ dataPoint, children }: { dataPoint: string; 
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <Wand2 className="text-primary" />
-            <span>Контекстное объяснение</span>
+            <span>Kontekstli tushuntirish</span>
           </DialogTitle>
           <DialogDescription>
-            Выберите аудиторию, чтобы получить объяснение для "{dataPoint}" с помощью ИИ.
+            "{dataPoint}" uchun sun'iy intellekt yordamida tushuntirish olish uchun auditoriyani tanlang.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <label htmlFor="audience" className="text-right">
-              Аудитория
+              Auditoriya
             </label>
             <Select value={audience} onValueChange={setAudience}>
               <SelectTrigger id="audience" className="col-span-3">
-                <SelectValue placeholder="Выберите аудиторию" />
+                <SelectValue placeholder="Auditoriyani tanlang" />
               </SelectTrigger>
               <SelectContent>
                 {Object.entries(audienceMap).map(([value, label]) => (
@@ -100,7 +100,7 @@ export function AiExplainerDialog({ dataPoint, children }: { dataPoint: string; 
         <DialogFooter>
           <Button onClick={handleExplain} disabled={loading} className="w-full sm:w-auto">
             {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4" />}
-            Сгенерировать
+            Yaratish
           </Button>
         </DialogFooter>
       </DialogContent>
@@ -124,7 +124,7 @@ export function AiExplainerButton({ dataPoint }: { dataPoint: string }) {
             </Button>
           </TooltipTrigger>
           <TooltipContent>
-            <p>Получить объяснение от ИИ</p>
+            <p>AI yordamida tushuntirish</p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>

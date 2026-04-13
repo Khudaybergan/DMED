@@ -6,11 +6,11 @@ export function DashboardHeader() {
       <div className="flex items-center gap-4">
         <DmedLogo className="h-10 w-10 md:h-12 md:w-12" />
         <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight text-brand-orange">
-          DMED В ЦИФРОВЫХ ПОКАЗАТЕЛЯХ
+          DMED RAQAMLI KO'RSATKICHLARDA
         </h1>
       </div>
       <div className="flex items-center gap-4 md:gap-6 text-xs md:text-sm">
-        <MinistryOfHealthLogo className="h-6" />
+        <MinistryOfHealthLogo className="h-10" />
         <UzinfocomLogo className="h-6" />
       </div>
     </header>

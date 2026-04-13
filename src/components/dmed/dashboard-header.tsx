@@ -16,7 +16,9 @@ export function DashboardHeader() {
       </div>
       <div className="flex items-center gap-4">
         <div className="text-right">
-          <p className="text-xs font-medium uppercase text-foreground/80 tracking-wider">{dictionary.header.ministry}</p>
+          {dictionary.header.ministry.map((line, index) => (
+            <p key={index} className="text-xs font-medium uppercase text-foreground/80 tracking-wider">{line}</p>
+          ))}
         </div>
         <DmedLogo />
         <LanguageSwitcher />

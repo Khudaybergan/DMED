@@ -2,7 +2,10 @@ export const dictionaries = {
   uz: {
     header: {
       title: "DMED RAQAMLI KO'RSATKICHLARDA",
-      ministry: "O'ZBEKISTON RESPUBLIKASI SOG'LIQNI SAQLASH VAZIRLIGI",
+      ministry: [
+        "O'ZBEKISTON RESPUBLIKASI",
+        "SOG'LIQNI SAQLASH VAZIRLIGI"
+      ],
     },
     keyMetrics: {
       title: "Asosiy ko'rsatkichlar",
@@ -104,7 +107,7 @@ export const dictionaries = {
             },
             {
                 title: 'Маблағлардан мақсадли фойдаланиш ва шаффофлик таъминланди',
-                value: '755 mlrd so‘m',
+                value: '755 mlrd so‘м',
                 subValue: '($60,4 mln.)',
             }
         ]
@@ -160,7 +163,10 @@ export const dictionaries = {
   en: {
     header: {
       title: "DMED IN DIGITAL INDICATORS",
-      ministry: "MINISTRY OF HEALTH OF THE REPUBLIC OF UZBEKISTAN",
+      ministry: [
+        "MINISTRY OF HEALTH OF THE",
+        "REPUBLIC OF UZBEKISTAN"
+      ],
     },
     keyMetrics: {
       title: "Key Metrics",
@@ -318,7 +324,10 @@ export const dictionaries = {
   ru: {
     header: {
       title: "DMED В ЦИФРОВЫХ ПОКАЗАТЕЛЯХ",
-      ministry: "МИНИСТЕРСТВО ЗДРАВООХРАНЕНИЯ РЕСПУБЛИКИ УЗБЕКИСТАН",
+      ministry: [
+        "МИНИСТЕРСТВО ЗДРАВООХРАНЕНИЯ",
+        "РЕСПУБЛИКИ УЗБЕКИСТАН"
+      ],
     },
     keyMetrics: {
       title: "Ключевые показатели",

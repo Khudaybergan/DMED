@@ -15,6 +15,7 @@ export default {
         code: ['monospace'],
       },
       colors: {
+        'brand-orange': '#CC831A',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

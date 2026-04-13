@@ -37,12 +37,12 @@ export function AiOverviewSection() {
   return (
     <div className="w-full max-w-7xl">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">{title}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr">
         {stats.map((stat, i) => {
           const Icon = aiStatIcons[i];
           const data = aiStatData[i];
           return (
-            <GlowCard key={i} className="relative p-8 text-center">
+            <GlowCard key={i} className="relative p-8 text-center flex flex-col justify-center items-center">
               <AiExplainerButton dataPoint={data.dataPointForAI} />
                <div className="p-4 bg-primary/10 rounded-xl border border-primary/20 mb-6 inline-block">
                 <Icon className="h-12 w-12 text-primary" />

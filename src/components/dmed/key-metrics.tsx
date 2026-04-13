@@ -21,7 +21,7 @@ type Metric = {
 };
 
 const MetricCard = ({ metric, label }: { metric: Metric, label: string }) => (
-  <GlowCard className="p-4 sm:p-6 text-center">
+  <GlowCard className="p-4 sm:p-6 text-center flex flex-col justify-center">
     <AiExplainerButton dataPoint={metric.dataPointForAI} />
     <metric.icon className="mx-auto h-8 w-8 text-primary mb-3" />
     <p className="text-3xl sm:text-4xl font-bold text-primary">{metric.value}</p>
@@ -75,7 +75,7 @@ export function KeyMetrics() {
   return (
     <div className="space-y-8 w-full">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{title}</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
         {metricData.map((metric, i) => (
           <MetricCard key={i} metric={metric} label={metrics[i].label} />
         ))}

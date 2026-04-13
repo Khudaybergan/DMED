@@ -29,17 +29,22 @@ const resultIcons: LucideIcon[] = [
 
 const ResultCard = ({ result, icon: Icon }: { result: any, icon: LucideIcon }) => (
   <GlowCard className="p-6 flex flex-col text-center h-full">
-    <div className="mx-auto p-3 bg-primary/10 rounded-xl border border-primary/20 mb-4">
-      <Icon className="h-8 w-8 text-primary" />
+    <div>
+      <div className="mx-auto p-3 bg-primary/10 rounded-xl border border-primary/20 mb-4">
+        <Icon className="h-8 w-8 text-primary" />
+      </div>
+      <p className="text-base font-medium text-foreground/90">{result.title}</p>
     </div>
-    <p className="flex-1 text-base font-medium text-foreground/90">{result.title}</p>
-    <div className="mt-4">
-      <p className="text-3xl font-bold text-primary leading-tight">{result.value}</p>
-      <p className="text-lg font-semibold text-primary/80">{result.subValue}</p>
+    <div className="flex-1" />
+    <div>
+      <div className="mt-4">
+        <p className="text-3xl font-bold text-primary leading-tight">{result.value}</p>
+        <p className="text-lg font-semibold text-primary/80">{result.subValue}</p>
+      </div>
+      {result.description && (
+        <p className="mt-3 text-sm text-muted-foreground">{result.description}</p>
+      )}
     </div>
-    {result.description && (
-      <p className="mt-3 text-sm text-muted-foreground">{result.description}</p>
-    )}
   </GlowCard>
 );
 
